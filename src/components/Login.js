@@ -38,7 +38,7 @@ class Login extends Component {
                     </div>
                     <p></p>
                     <div className="form-group col-md-4">
-                        <input type="submit" className="btn btn-lg btn-danger btn-block" value="login" />
+                        <input type="submit" className="btn btn-lg btn-dark btn-block" value="login" />
                     </div>
                 </div>
             </form>

@@ -134,7 +134,7 @@ class App extends Component {
         <div className="app container">
           <div className="jumbotron">
             <p> </p>
-            <p className="lead text-center">Bienvenidos al hall de invitados de Neh y Cris</p>
+            <p className="lead text-center">Bienvenidos al hall de invitados</p>
             <SaveData 
               guestInfo={this.guestInfo}
               mensaje={this.data}
@@ -147,7 +147,9 @@ class App extends Component {
         <div className="app container">
           <div className="jumbotron">
             <p> </p>
-            <p className="lead text-center">Login! </p>
+            <p className="lead text-center" >
+              <h2>Bienvenido!</h2> 
+            </p>
             <Login 
               loginData={this.loginData}
             />

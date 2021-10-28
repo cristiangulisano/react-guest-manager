@@ -179,10 +179,58 @@ class SaveData extends Component {
             console.log(this.props.mensaje)
             return (
                 <form onSubmit={this.initilize}>
+                    
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">Hola! Somos Neh y Cris!</p>
+                            <p class="mb-0">Nos casamos! y queremos invitarte a que vengas a la ceremonia y a la fiesta</p>
+                            <p class="mb-0">para acompañarnos en este evento tan importante para nosotros.</p>
+                            <p></p>
+                        </blockquote>     
+                        
+                                           
+                    </figure>
+
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="bs-component">
+                                <div class="card border-info mb-3" styles="max-width: 20rem;">
+                                    <div class="card-header">Cuando?</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Viernes 21 de Diciembre 2021</h4>
+                                        <p class="card-text">Horario 19:00 - Puntual</p>
+                                    </div>
+                                </div>                                                                                                            
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="bs-component">
+                                <div class="card border-info mb-3" styles="max-width: 20rem;">
+                                    <div class="card-header">Donde?</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Puerto Madero, CABA</h4>
+                                        <p class="card-text">Lola mora...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-info mb-3" styles="max-width: 20rem;">
+                        <div class="card-header">Que regalarnos? [sin compromiso]</div>
+                        <div class="card-body">
+                            <p class="card-text">Llevamos unos años viviendo juntos y ya tenemos todo, nos faltaría un autito...</p>
+                            <p class="card-text">Dinero es el mejor regalo que nos pueden hacer y nos va a servir para la luna de miel!</p>
+                        </div>
+                    </div>
+
                      <div className="form-group col-md-4">
                         <input type="submit" className="btn btn-lg btn-danger btn-block" value="Ingresar" />
                     </div>
+
                 </form>
+
+                
             );
         }
     }
