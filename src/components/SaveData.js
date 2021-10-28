@@ -95,6 +95,7 @@ class SaveData extends Component {
     render() {
         //this.initilize(this.props.mensaje);
         if (this.state.initialized){
+            console.log(this.props.mensaje)
         return (
             <form onSubmit={this.handleData}>
                 <div className="row">
@@ -175,6 +176,7 @@ class SaveData extends Component {
             </form>
         );
         } else {
+            console.log(this.props.mensaje)
             return (
                 <form onSubmit={this.initilize}>
                      <div className="form-group col-md-4">

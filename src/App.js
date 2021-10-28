@@ -54,14 +54,15 @@ class App extends Component {
 
     this.credentials.jwt = body.idToken;
     this.credentials.userId = body.localId
+
+    this.updateStat()
   }
 
-  async apiRetrieve() {
+  async apiRetrieve(loadData) {
     const url = `https://fir-guest-manager-default-rtdb.firebaseio.com/guests/${this.credentials.userId}.json?auth=${this.credentials.jwt}`;
-    
     var res = await fetch(url)
-    var sarasa = await res
-    var body = await sarasa.json()
+    var body = await res.json()
+    //this.data = await res.json()
 
     this.data.docId = body.docId;
     this.data.additional_info = body.additional_info
@@ -73,12 +74,34 @@ class App extends Component {
     this.data.main_guest_asoc = body.main_guest_asoc
     this.data.name = body.name
     this.data.vegetarian = body.vegetarian
-
+  
     console.log("body")
     console.log(body)
     console.log("data")
     console.log(this.data)
+
+    //signal();
+
+    //const delay = ms => new Promise(res => setTimeout(res, ms));
+    //await delay(5000);
+    //loadData(body)
+    //console.log("data")
+    //console.log(this.data)
+    
   }
+  /*
+  loadData(body){
+    this.data.docId = body.docId;
+    this.data.additional_info = body.additional_info
+    this.data.category = body.category
+    this.data.confirmed_1 = body.confirmed_1
+    this.data.confirmed_2 = body.confirmed_2
+    this.data.drinks = body.drinks
+    this.data.email = body.email
+    this.data.main_guest_asoc = body.main_guest_asoc
+    this.data.name = body.name
+    this.data.vegetarian = body.vegetarian
+  }*/
 
   async apiUpdate(data) {
     const url = `https://fir-guest-manager-default-rtdb.firebaseio.com/guests/${this.credentials.userId}.json?auth=${this.credentials.jwt}`;
@@ -111,24 +134,37 @@ class App extends Component {
     this.apiUpdate(this.data);
     //this.apiRetrieve();
     this.setState({
+      // forzar un logout...
       isLoggedIn: false
     })
   }
 
   loginData = (val, user, pass) => {
-    this.apiLogin(user, pass);
+    this.apiLogin(user, pass, this.updateStat);
+  }
+  updateStat(){
     if (this.credentials.jwt){
+      //this.retrieveInfo(this.signal)
       this.apiRetrieve()
+      //this.apiRetrieve(this.loadData)
+      //this.retrieveInfo(this.apiRetrieve)
+      //this.retrieveInfo(this.signal)
       this.setState({
-        isLoggedIn: val
-      }
-      //,()=>{this.apiRetrieve();}
-      )
+        isLoggedIn: true
+      })
     }
   }
+  /*
+  retrieveInfo(apiRetrieve){
+    apiRetrieve();
+  }*/
+  /*signal(){
+    this.setState({
+      isLoggedIn: true
+    })
+  }*/
 
   render(){
-    
     if (this.state.isLoggedIn){
       return (
         <div className="app container">
@@ -147,7 +183,7 @@ class App extends Component {
         <div className="app container">
           <div className="jumbotron">
             <p> </p>
-            <p className="lead text-center">Login!</p>
+            <p className="lead text-center">Login! </p>
             <Login 
               loginData={this.loginData}
             />
