@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Canvas from "./canvas.js";
+import "./styles.css";
 
 class Ticket extends Component {
 
@@ -44,8 +46,7 @@ class Ticket extends Component {
                         </div>
                         </div>
                     </div>
-
-
+                    <Canvas text={this.props.mensaje.name} />
                 </form>
           );
     }
