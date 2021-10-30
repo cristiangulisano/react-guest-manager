@@ -21,16 +21,16 @@ class Login extends Component {
                     <p> Ingrese Credenciales</p>
                     <p> </p>
                     <h>Usuario:</h>
-                    <div className="form-group col-md-6">
+                    <div className="form-group col-md-4">
                         <input ref={this.saveUser} type="text" 
                         className="form-control form-control-lg" 
-                        placeholder="usuario" 
+                        placeholder="usuario@mail.com" 
                         //value="cristian.gulisano.dev@gmail.com"   // test
                         />
                     </div>
                     <h>Password:</h>
-                    <div className="form-group col-md-2">
-                        <input ref={this.savePass} type="text" 
+                    <div className="form-group col-md-4">
+                        <input ref={this.savePass} type="password" 
                         className="form-control
                         form-control-lg" placeholder="* * * * * *"
                         //value="123456"  // test

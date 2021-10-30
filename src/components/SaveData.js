@@ -186,9 +186,7 @@ class SaveData extends Component {
                             <p class="mb-0">Nos casamos! y queremos invitarte a que vengas a la ceremonia y a la fiesta</p>
                             <p class="mb-0">para acompañarnos en este evento tan importante para nosotros.</p>
                             <p></p>
-                        </blockquote>     
-                        
-                                           
+                        </blockquote>             
                     </figure>
 
                     <div className="row">
@@ -227,10 +225,7 @@ class SaveData extends Component {
                      <div className="form-group col-md-4">
                         <input type="submit" className="btn btn-lg btn-danger btn-block" value="Ingresar" />
                     </div>
-
                 </form>
-
-                
             );
         }
     }

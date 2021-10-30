@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import SaveData from './components/SaveData';
 import Login from './components/Login';
+import Ticket from './components/Ticket';
 
 class App extends Component {
   
   state = {
-    isLoggedIn: false
+    isLoggedIn: false,
+    isConfirmed: false
   }
   data = {
       docId: '',
@@ -13,11 +15,11 @@ class App extends Component {
       category: '',
       confirmed_1: '',
       confirmed_2: '',
-      drinks: false,
+      drinks: '',
       email: '',
       main_guest_asoc: '',
       name: '',
-      vegetarian: false
+      vegetarian: ''
   }
   user = {
     email: '',
@@ -112,7 +114,8 @@ class App extends Component {
     this.apiUpdate(this.data);
     this.setState({
       // forzar un logout...
-      isLoggedIn: false
+      //isLoggedIn: false
+      isConfirmed: true
     })
   }
 
@@ -130,18 +133,34 @@ class App extends Component {
 
   render(){
     if (this.state.isLoggedIn){
-      return (
-        <div className="app container">
-          <div className="jumbotron">
-            <p> </p>
-            <p className="lead text-center">Bienvenidos al hall de invitados</p>
-            <SaveData 
-              guestInfo={this.guestInfo}
-              mensaje={this.data}
-            />
+      if (!this.state.isConfirmed){
+        return (
+          <div className="app container">
+            <div className="jumbotron">
+              <p> </p>
+              <p className="lead text-center">Bienvenidos al hall de invitados</p>
+              <SaveData 
+                guestInfo={this.guestInfo}
+                mensaje={this.data}
+              />
+            </div>
           </div>
-        </div>
-      );
+        );
+      } else {
+        return (
+          <div className="app container">
+            <div className="jumbotron">
+              <p> </p>
+              <p className="lead text-center" >
+                <h2></h2> 
+              </p>
+              <Ticket 
+                mensaje={this.data}
+              />
+            </div>
+          </div>
+        );
+      }
     } else {
       return (
         <div className="app container">
