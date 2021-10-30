@@ -33,7 +33,6 @@ class App extends Component {
 
   async apiLogin(user, pass) {
     const key = 'AIzaSyCbaOoRdSXWHIvS7jyXQLIL2lxm8mOwzd0';
-    //const user = this.user;
     const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${key}`;
 
     var res = await fetch(url , {
@@ -43,8 +42,6 @@ class App extends Component {
       'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        //email: user.email, 
-        //password: user.password,
         email: user, 
         password: pass,
         returnSecureToken: true
@@ -113,8 +110,6 @@ class App extends Component {
     console.log(this.data)
     this.apiUpdate(this.data);
     this.setState({
-      // forzar un logout...
-      //isLoggedIn: false
       isConfirmed: true
     })
   }
@@ -129,6 +124,13 @@ class App extends Component {
         isLoggedIn: true
       })
     }
+  }
+
+  logOut = () => {
+    this.setState({
+      isLoggedIn: false,
+      isConfirmed: false
+    })
   }
 
   render(){
@@ -155,6 +157,7 @@ class App extends Component {
                 <h2></h2> 
               </p>
               <Ticket 
+                x={this.logOut}
                 mensaje={this.data}
               />
             </div>

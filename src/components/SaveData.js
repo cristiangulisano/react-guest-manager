@@ -29,11 +29,10 @@ class SaveData extends Component {
 
     initilize = (e) => {
         e.preventDefault();
-        //this.init = val
+        
         this.setState({
             initialized: true
         })
-        //this.state.initialized = true
     }
 
     handleData = (e) => {
@@ -93,7 +92,6 @@ class SaveData extends Component {
     }
 
     render() {
-        //this.initilize(this.props.mensaje);
         if (this.state.initialized){
             console.log(this.props.mensaje)
         return (
@@ -103,68 +101,76 @@ class SaveData extends Component {
                     <p> </p>
                     <p> Por favor completar/validar los datos y confirmar asistencia</p>
                     <p> </p>
-                    
-                    <h>Nombre:</h>
-                    <div className="form-group col-md-6">
-                        <input ref={this.saveName} type="text" 
-                        className="form-control form-control-lg" 
-                        placeholder={this.props.mensaje.name} 
-                        //value={this.props.mensaje.name}
-                        />
-                    </div>
-                    <div className="form-group col-md-2">
-                        <input type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.category}
-                        value={this.props.mensaje.category}
-                        />
+
+                    <div className="row">
+                        <div className="form-group col-md-6">
+                            <h>Nombre:</h>
+                            <input ref={this.saveName} type="text" 
+                            className="form-control form-control-lg" 
+                            placeholder={this.props.mensaje.name} 
+                            />
+                        </div>
+                        <div className="form-group col-md-2">
+                            <h>Categoría</h>
+                            <input type="text" className="form-control
+                            form-control-lg" placeholder={this.props.mensaje.category}
+                            value={this.props.mensaje.category}
+                            />
+                        </div>
                     </div>
 
                     <p></p>
-                    <h>Email / Documento</h>
-                    <div className="form-group col-md-6">
-                        <input ref={this.saveEmail} type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.email}
-                        //value={this.props.mensaje.email}
-                        />
-                    </div>
-                    <div className="form-group col-md-2">
-                        <input ref={this.saveDocId} type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.docId}
-                        //value={this.props.mensaje.docId}
-                        />
+                    <div className="row">
+                        <div className="form-group col-md-6">
+                            <h>Email</h>
+                            <input ref={this.saveEmail} type="text" className="form-control
+                            form-control-lg" placeholder={this.props.mensaje.email}
+                            />
+                        </div>
+                        <div className="form-group col-md-2">
+                            <h>Documento</h>
+                            <input ref={this.saveDocId} type="text" className="form-control
+                            form-control-lg" placeholder={this.props.mensaje.docId}
+                            />
+                        </div>
                     </div>
 
                     <p></p>
-                    <h>Consume Tragos / Menu Vegetariano</h>
-                    <div className="form-group col-md-2">
-                        <input ref={this.saveDrinks} type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.drinks}  
-                        //value={this.props.mensaje.drinks}  
-                        />
-                    </div>
-                    <div className="form-group col-md-2">
-                        <input ref={this.saveVegetarian} type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.vegetarian} 
-                        //value={this.props.mensaje.vegetarian}  
-                        />
+                    <div className="row">
+                        <div className="form-group col-md-2">
+                            <h>Consume Tragos</h>
+                            <select class="form-select" id="exampleSelect1" ref={this.saveDrinks} defaultValue={this.props.mensaje.drinks}>
+                             <option> </option>
+                             <option>SI</option>
+                             <option>NO</option>
+                            </select>
+                        </div>
+                        <div className="form-group col-md-2">
+                            <h>Menu Vegetariano</h>
+                            <select class="form-select" id="exampleSelect1" ref={this.saveVegetarian} defaultValue={this.props.mensaje.vegetarian}>
+                             <option> </option>
+                             <option>SI</option>
+                             <option>NO</option>
+                            </select>
+                        </div>
                     </div>
 
                     <p></p>
                     <h>Información Adicional:</h>
                     <div className="form-group col-md-8">
                         <input ref={this.saveAdditional_info} type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.additional_info}  
-                        //value={this.props.mensaje.additional_info}  
+                        form-control-lg" placeholder={this.props.mensaje.additional_info}   
                         />
                     </div>
 
                     <p></p>
-                    <h>Confirma Asistencia:</h>
                     <div className="form-group col-md-2">
-                        <input ref={this.saveConfirmed_1} type="text" className="form-control
-                        form-control-lg" placeholder={this.props.mensaje.confirmed_1}
-                        //value={this.props.mensaje.confirmed_1}  
-                        />
+                    <h>Confirma Asistencia:</h>
+                            <select class="form-select" id="exampleSelect1" ref={this.saveConfirmed_1} defaultValue={this.props.mensaje.confirmed_1}>
+                             <option> </option>
+                             <option>SI</option>
+                             <option>NO</option>
+                            </select>
                     </div>
                     
                     <p></p>
@@ -219,10 +225,14 @@ class SaveData extends Component {
                         <div class="card-body">
                             <p class="card-text">Llevamos unos años viviendo juntos y ya tenemos todo, nos faltaría un autito...</p>
                             <p class="card-text">Dinero es el mejor regalo que nos pueden hacer y nos va a servir para la luna de miel!</p>
+                            <div>
+                                <span class="badge bg-light">CBU 11111111111111111111</span>
+                            </div>
                         </div>
-                    </div>
 
-                     <div className="form-group col-md-4">
+                    </div>
+                    
+                    <div className="form-group col-md-4">
                         <input type="submit" className="btn btn-lg btn-danger btn-block" value="Ingresar" />
                     </div>
                 </form>

@@ -4,6 +4,20 @@ import "./styles.css";
 
 class Ticket extends Component {
 
+    state = {
+        logout: false
+    }
+
+    initilize = (e) => {
+        e.preventDefault();
+
+        this.props.x(this.init);
+
+        this.setState({
+            logout: true
+        })
+    }
+
     render() {
         return (
             <form onSubmit={this.initilize}>
@@ -26,7 +40,7 @@ class Ticket extends Component {
                                 <div class="card border-dark mb-3" styles="max-width: 20rem;">
                                 <div class="card-body">
                                     <h8 class="card-title">Pasajero</h8>
-                                    <h6 class="card-text">Pepe Argento</h6>
+                                    <h6 class="card-text">{this.props.mensaje.name}</h6>
                                 </div>
                                 </div>
                                 </div>
@@ -46,7 +60,15 @@ class Ticket extends Component {
                         </div>
                         </div>
                     </div>
-                    <Canvas text={this.props.mensaje.name} />
+                    <div className="bord">
+                    <Canvas text={this.props.mensaje} />
+                    </div>
+
+                    <p></p>
+                    <p></p>
+                    <div className="form-group col-md-4">
+                        <input type="submit" className="btn btn-lg btn-danger btn-block" value="Logout" />
+                    </div>
                 </form>
           );
     }
