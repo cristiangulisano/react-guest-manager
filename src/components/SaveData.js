@@ -62,11 +62,11 @@ class SaveData extends Component {
             this.init.drinks = this.props.mensaje.drinks;
         };
 
-        if (this.saveEmail.current.value) {
+        /*if (this.saveEmail.current.value) {
             this.init.email = this.saveEmail.current.value;
-        } else {
+        } else {*/
             this.init.email = this.props.mensaje.email;
-        };
+        //};
 
         if (this.saveName.current.value){ 
             this.init.name = this.saveName.current.value
@@ -110,13 +110,6 @@ class SaveData extends Component {
                             placeholder={this.props.mensaje.name} 
                             />
                         </div>
-                        <div className="form-group col-md-2">
-                            <h>Categoría</h>
-                            <input type="text" className="form-control
-                            form-control-lg" placeholder={this.props.mensaje.category}
-                            value={this.props.mensaje.category}
-                            />
-                        </div>
                     </div>
 
                     <p></p>
@@ -124,7 +117,7 @@ class SaveData extends Component {
                         <div className="form-group col-md-6">
                             <h>Email</h>
                             <input ref={this.saveEmail} type="text" className="form-control
-                            form-control-lg" placeholder={this.props.mensaje.email}
+                            form-control-lg" value={this.props.mensaje.email}
                             />
                         </div>
                         <div className="form-group col-md-2">
@@ -164,7 +157,7 @@ class SaveData extends Component {
                     </div>
 
                     <p></p>
-                    <div className="form-group col-md-2">
+                    <div className="form-group col-md-3">
                     <h>Confirma Asistencia:</h>
                             <select class="form-select" id="exampleSelect1" ref={this.saveConfirmed_1} defaultValue={this.props.mensaje.confirmed_1}>
                              <option> </option>
@@ -189,11 +182,20 @@ class SaveData extends Component {
                     <figure class="text-center">
                         <blockquote class="blockquote">
                             <p class="mb-0">Hola! Somos Neh y Cris!</p>
-                            <p class="mb-0">Nos casamos! y queremos invitarte a que vengas a la ceremonia y a la fiesta</p>
+                            <p class="mb-0">Nos casamos! y queremos invitarte a que vengas a la ceremonia y la fiesta</p>
                             <p class="mb-0">para acompañarnos en este evento tan importante para nosotros.</p>
                             <p></p>
                         </blockquote>             
                     </figure>
+
+                    <div class="card border-info mb-3" styles="max-width: 20rem;">
+                        <div class="card-header">Historia</div>
+                        <div class="card-body">
+                            <p class="card-text">Nos conocimos.....</p>
+                            <p class="card-text">  bla bla bla </p>
+                            <p class="card-text">  imagen or not... </p>
+                        </div>
+                    </div>
 
                     <div className="row">
                         <div className="col-lg-6">
@@ -201,8 +203,9 @@ class SaveData extends Component {
                                 <div class="card border-info mb-3" styles="max-width: 20rem;">
                                     <div class="card-header">Cuando?</div>
                                     <div class="card-body">
-                                        <h4 class="card-title">Viernes 21 de Diciembre 2021</h4>
-                                        <p class="card-text">Horario 19:00 - Puntual</p>
+                                        <h4 class="card-title">Viernes 21 de Enero 2022</h4>
+                                        <p class="card-text">Horario 19:00 - Recepción</p>
+                                        <p class="card-text">Horario 20:00 - Ceremonia</p>
                                     </div>
                                 </div>                                                                                                            
                             </div>
@@ -223,13 +226,31 @@ class SaveData extends Component {
                     <div class="card border-info mb-3" styles="max-width: 20rem;">
                         <div class="card-header">Que regalarnos? [sin compromiso]</div>
                         <div class="card-body">
-                            <p class="card-text">Llevamos unos años viviendo juntos y ya tenemos todo, nos faltaría un autito...</p>
+                            <p class="card-text">Llevamos unos años viviendo juntos y ya tenemos todo!</p>
                             <p class="card-text">Dinero es el mejor regalo que nos pueden hacer y nos va a servir para la luna de miel!</p>
+                            <h8>Podes hacer una transferencia:</h8>
                             <div>
-                                <span class="badge bg-light">CBU 11111111111111111111</span>
+                                <span class="badge bg-light">CBU: 11111111111111111111</span>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="card border-info mb-3" styles="max-width: 20rem;">
+                        <div class="card-header">Dress Code / Codigo de Vestimenta</div>
+                        <div class="card-body">
+                             <h>Mujeres</h>
+                            <div>
+                                <span class="badge bg-light">Vestido</span>
+                                <span class="badge bg-secondary"> </span>
+                                <span class="badge bg-light">Ropa Formal</span>
+                            </div>
+                            <h>Hombres</h>
+                            <div>
+                                <span class="badge bg-light">Elegante Sport</span>
+                                <span class="badge bg-secondary"> </span>
+                                <span class="badge bg-light">Traje</span>
+                            </div>
+                        </div>
                     </div>
                     
                     <div className="form-group col-md-4">
