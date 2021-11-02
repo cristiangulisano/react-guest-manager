@@ -7,18 +7,21 @@ class App extends Component {
   
   state = {
     isLoggedIn: false,
-    isConfirmed: false
+    isConfirmed: false,
+    isErrorLogin: "No"
   }
   data = {
+      CBU: '',
       docId: '',
       additional_info: '',
       category: '',
-      confirmed_1: '',
-      confirmed_2: '',
+      confirmed: '',
       drinks: '',
       email: '',
       main_guest_asoc: '',
       name: '',
+      name_orig: '',
+      address: '',
       vegetarian: ''
   }
   user = {
@@ -65,12 +68,14 @@ class App extends Component {
     this.data.docId = body.docId;
     this.data.additional_info = body.additional_info
     this.data.category = body.category
-    this.data.confirmed_1 = body.confirmed_1
-    this.data.confirmed_2 = body.confirmed_2
+    this.data.confirmed = body.confirmed
+    this.data.CBU = body.CBU
+    this.data.name_orig = body.name_orig
     this.data.drinks = body.drinks
     this.data.email = body.email
     this.data.main_guest_asoc = body.main_guest_asoc
     this.data.name = body.name
+    this.data.address = body.address
     this.data.vegetarian = body.vegetarian
   
     console.log("body")
@@ -93,12 +98,14 @@ class App extends Component {
         docId: data.docId,
         additional_info: data.additional_info,
         category: data.category,
-        confirmed_1: data.confirmed_1,
-        confirmed_2: data.confirmed_2,
+        confirmed: data.confirmed,
+        CBU: data.CBU,
+        name_orig: data.name_orig,
         drinks: data.drinks,
         email: data.email,
         main_guest_asoc: data.main_guest_asoc,
         name: data.name,
+        address: data.address,
         vegetarian: data.vegetarian
       })
     })
@@ -117,19 +124,29 @@ class App extends Component {
   loginData = (val, user, pass) => {
     this.apiLogin(user, pass, this.updateStat);
   }
-  updateStat(){
+  async updateStat(){
+    
     if (this.credentials.jwt){
       this.apiRetrieve()
+      await new Promise(resolve => setTimeout(resolve, 1000)) // 1 sec
       this.setState({
-        isLoggedIn: true
+        isLoggedIn: true,
+        isErrorLogin: "No"
+      })
+
+    } else {
+      this.setState({
+        isErrorLogin: "Si"
       })
     }
+
   }
 
   logOut = () => {
     this.setState({
       isLoggedIn: false,
-      isConfirmed: false
+      isConfirmed: false,
+      isErrorLogin: "No"
     })
   }
 
@@ -174,6 +191,7 @@ class App extends Component {
             </p>
             <Login 
               loginData={this.loginData}
+              msg={this.state.isErrorLogin}
             />
           </div>
         </div>

@@ -42,7 +42,7 @@ class Ticket extends Component {
                                     <h8 class="card-title">Pasajero</h8>
                                     <h6 class="card-text">{this.props.mensaje.name}</h6>
                                     <h8 class="card-title">Estado</h8>
-                                    <h6 class="card-text">{this.props.mensaje.confirmed_1}-CONFIRMADO</h6>
+                                    <h6 class="card-text">{this.props.mensaje.confirmed}-CONFIRMADO</h6>
                                 </div>
                                 </div>
                                 </div>
@@ -52,7 +52,7 @@ class Ticket extends Component {
                                 <div class="card border-dark mb-3" styles="max-width: 20rem;">
                                 <div class="card-body">
                                     <h8 class="card-title">Partida</h8>
-                                    <h6>Lola mora....</h6> 
+                                    <h6>{this.props.mensaje.address}</h6> 
                                     <h8 class="card-title">Destino</h8>
                                     <h6 class="card-text">Hyderabad, India</h6>
                                 </div>

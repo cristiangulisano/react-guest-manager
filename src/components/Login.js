@@ -13,7 +13,16 @@ class Login extends Component {
         this.props.loginData(val, user, pass);
     }
 
+    x = {
+        msgLogin : "hola"
+    }
+
     render() {
+        if (this.props.msg === "Si") {
+            this.x.msgLogin = " Usuario o Password incorrecto"
+        }else {
+            this.x.msgLogin = ""
+        }
         return (
             <form onSubmit={this.handleData}>
                 <div className="row">
@@ -35,6 +44,7 @@ class Login extends Component {
                         form-control-lg" placeholder="* * * * * *"
                         //value="123456"  // test
                         />
+                        <span class="badge bg-warning">{this.x.msgLogin}</span>
                     </div>
                     <p></p>
                     <div className="form-group col-md-4">

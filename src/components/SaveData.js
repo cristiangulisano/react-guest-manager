@@ -7,16 +7,18 @@ class SaveData extends Component {
     }
 
     init = {
+        CBU: '',
         docId: '',
         additional_info: '',
         category: '',
-        confirmed_1: '',
-        confirmed_2: '',
-        drinks: false,
+        confirmed: '',
+        drinks: '',
         email: '',
         main_guest_asoc: '',
         name: '',
-        vegetarian: false
+        name_orig: '',
+        address: '',
+        vegetarian: ''
     }
 
     saveName = React.createRef();
@@ -25,7 +27,7 @@ class SaveData extends Component {
     saveDrinks = React.createRef();
     saveVegetarian = React.createRef();
     saveAdditional_info = React.createRef();
-    saveConfirmed_1 = React.createRef();
+    saveConfirmed = React.createRef();
 
     initilize = (e) => {
         e.preventDefault();
@@ -50,10 +52,10 @@ class SaveData extends Component {
             this.init.additional_info = this.props.mensaje.additional_info;
         };
 
-        if (this.saveConfirmed_1.current.value) {
-            this.init.confirmed_1 = this.saveConfirmed_1.current.value;
+        if (this.saveConfirmed.current.value) {
+            this.init.confirmed = this.saveConfirmed.current.value;
         } else {
-            this.init.confirmed_1 = this.props.mensaje.confirmed_1;
+            this.init.confirmed = this.props.mensaje.confirmed;
         };
 
         if (this.saveDrinks.current.value) {
@@ -82,6 +84,9 @@ class SaveData extends Component {
 
         this.init.category = this.props.mensaje.category;
         this.init.main_guest_asoc = this.props.mensaje.main_guest_asoc;
+        this.init.CBU = this.props.mensaje.CBU;
+        this.init.name_orig = this.props.mensaje.name_orig;
+        this.init.address = this.props.mensaje.address;
 
         this.props.guestInfo(this.init);
 
@@ -159,7 +164,7 @@ class SaveData extends Component {
                     <p></p>
                     <div className="form-group col-md-3">
                     <h>Confirma Asistencia:</h>
-                            <select class="form-select" id="exampleSelect1" ref={this.saveConfirmed_1} defaultValue={this.props.mensaje.confirmed_1}>
+                            <select class="form-select" id="exampleSelect1" ref={this.saveConfirmed} defaultValue={this.props.mensaje.confirmed}>
                              <option> </option>
                              <option>SI</option>
                              <option>NO</option>
@@ -216,7 +221,7 @@ class SaveData extends Component {
                                     <div class="card-header">Donde?</div>
                                     <div class="card-body">
                                         <h4 class="card-title">Puerto Madero, CABA</h4>
-                                        <p class="card-text">Lola mora...</p>
+                                        <p class="card-text">{this.props.mensaje.address}</p>
                                     </div>
                                 </div>
                             </div>
@@ -224,13 +229,13 @@ class SaveData extends Component {
                     </div>
 
                     <div class="card border-info mb-3" styles="max-width: 20rem;">
-                        <div class="card-header">Que regalarnos? [sin compromiso]</div>
+                        <div class="card-header">Que regalarnos?</div>
                         <div class="card-body">
                             <p class="card-text">Llevamos unos años viviendo juntos y ya tenemos todo!</p>
                             <p class="card-text">Dinero es el mejor regalo que nos pueden hacer y nos va a servir para la luna de miel!</p>
                             <h8>Podes hacer una transferencia:</h8>
                             <div>
-                                <span class="badge bg-light">CBU: 11111111111111111111</span>
+                                <span class="badge bg-light">CBU: {this.props.mensaje.CBU}</span>
                             </div>
                         </div>
                     </div>
