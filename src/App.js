@@ -12,6 +12,8 @@ class App extends Component {
   }
   data = {
       CBU: '',
+      alias: '',
+      cuenta: '',
       docId: '',
       additional_info: '',
       category: '',
@@ -22,6 +24,7 @@ class App extends Component {
       name: '',
       name_orig: '',
       address: '',
+      addressLink: '',
       vegetarian: ''
   }
   user = {
@@ -70,12 +73,15 @@ class App extends Component {
     this.data.category = body.category
     this.data.confirmed = body.confirmed
     this.data.CBU = body.CBU
+    this.data.alias = body.alias
+    this.data.cuenta = body.cuenta
     this.data.name_orig = body.name_orig
     this.data.drinks = body.drinks
     this.data.email = body.email
     this.data.main_guest_asoc = body.main_guest_asoc
     this.data.name = body.name
     this.data.address = body.address
+    this.data.addressLink = body.addressLink
     this.data.vegetarian = body.vegetarian
   
     console.log("body")
@@ -100,12 +106,15 @@ class App extends Component {
         category: data.category,
         confirmed: data.confirmed,
         CBU: data.CBU,
+        alias: data.alias,
+        cuenta: data.cuenta,
         name_orig: data.name_orig,
         drinks: data.drinks,
         email: data.email,
         main_guest_asoc: data.main_guest_asoc,
         name: data.name,
         address: data.address,
+        addressLink: data.addressLink,
         vegetarian: data.vegetarian
       })
     })

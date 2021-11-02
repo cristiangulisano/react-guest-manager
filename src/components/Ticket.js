@@ -51,8 +51,9 @@ class Ticket extends Component {
                                 <div className="bs-component">
                                 <div class="card border-dark mb-3" styles="max-width: 20rem;">
                                 <div class="card-body">
-                                    <h8 class="card-title">Partida</h8>
-                                    <h6>{this.props.mensaje.address}</h6> 
+                                    <h8 class="card-title">Partida</h8><br></br>
+                                    <a target="_blank" href={this.props.mensaje.addressLink}>{this.props.mensaje.address}</a><br></br>
+                                    <br></br>
                                     <h8 class="card-title">Destino</h8>
                                     <h6 class="card-text">Hyderabad, India</h6>
                                 </div>
