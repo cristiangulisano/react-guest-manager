@@ -84,10 +84,11 @@ class App extends Component {
     this.data.addressLink = body.addressLink
     this.data.vegetarian = body.vegetarian
   
-    console.log("body")
+    /*console.log("body")
     console.log(body)
     console.log("data")
     console.log(this.data)
+    */
     
   }
 
@@ -123,7 +124,7 @@ class App extends Component {
 
   guestInfo = (init) => {
     this.data = init
-    console.log(this.data)
+    //console.log(this.data)
     this.apiUpdate(this.data);
     this.setState({
       isConfirmed: true
@@ -151,6 +152,21 @@ class App extends Component {
 
   }
 
+  evalBackOrOut = (backout) =>{
+    this.backOrOut(backout);
+  }
+  async backOrOut(backout){
+    await new Promise(resolve => setTimeout(resolve, 1000)) // 1 sec
+    if (backout === "out") {
+      this.logOut();
+    } else {
+      this.setState({
+        isLoggedIn: true,
+        isConfirmed: false,
+        isErrorLogin: "No"
+      })
+    }
+  }
   logOut = () => {
     this.setState({
       isLoggedIn: false,
@@ -183,7 +199,7 @@ class App extends Component {
                 <h2></h2> 
               </p>
               <Ticket 
-                x={this.logOut}
+                x={this.evalBackOrOut}
                 mensaje={this.data}
               />
             </div>

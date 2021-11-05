@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Canvas from "./canvas.js";
 import "./styles.css";
+import ReactToPrint from 'react-to-print';
 
 class Ticket extends Component {
 
@@ -8,10 +9,22 @@ class Ticket extends Component {
         logout: false
     }
 
-    initilize = (e) => {
+    goback = (e) => {
         e.preventDefault();
 
-        this.props.x(this.init);
+        const backout = "back"
+        this.props.x(backout);
+
+        this.setState({
+            logout: false,
+        })
+    }
+
+    logout = (e) => {
+        e.preventDefault();
+
+        const backout = "out"
+        this.props.x(backout);
 
         this.setState({
             logout: true
@@ -20,7 +33,7 @@ class Ticket extends Component {
 
     render() {
         return (
-            <form onSubmit={this.initilize}>
+            <form onSubmit={this.logout}>
                     
                     <figure class="text-center">
                         <blockquote class="blockquote">
@@ -74,13 +87,22 @@ class Ticket extends Component {
                         </div>
                     </div>
                     <div className="bord">
-                    <Canvas text={this.props.mensaje} />
+                    <Canvas text={this.props.mensaje} ref={(response) => (this.componentRef = response)} />
                     </div>
-
+                    <p></p>
+                    <ReactToPrint
+                        content={() => this.componentRef}
+                        trigger={() => <button className="btn btn-primary">Descargar Invitación</button>}
+                    />
                     <p></p>
                     <p></p>
-                    <div className="form-group col-md-4">
-                        <input type="submit" className="btn btn-lg btn-danger btn-block" value="Logout" />
+                    <div className="row">
+                        <div className="form-group col-sm-4">
+                            <input onClick={this.goback.bind(this)} className="btn btn-lg btn-danger btn-block" value="Volver" />
+                        </div>
+                        <div className="form-group col-md-1">
+                            <input type="submit" className="btn btn-lg btn-danger btn-block" value="Logout" />
+                        </div>
                     </div>
                 </form>
           );
