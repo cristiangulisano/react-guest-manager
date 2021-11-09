@@ -160,7 +160,7 @@ class SaveData extends Component {
                     </div>
 
                     <p></p>
-                    <h>Información Adicional:</h>
+                    <h>Mensaje a los novios?:</h>
                     <div className="form-group col-md-8">
                         <input ref={this.saveAdditional_info} type="text" className="form-control
                         form-control-lg" placeholder={this.props.mensaje.additional_info}   
@@ -207,7 +207,7 @@ class SaveData extends Component {
                             Neh trabajaría en las oficinas de Madero y Cris en Parque Patricios.<br></br>
                             Un mes antes de la mudanza, en la oficina del Centro, Cris trabajaba en el cuarto piso y en el primero.
                             Un día debido a un problema con un banco Cris debió quedarse hasta tarde. Cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
-                            Mientras tanto Neh fue a la cocina a buscar un café al ver a Cris, y fue ahí donde nos conocimos por primera vez...<br></br>
+                            Mientras tanto Neh fue a la cocina a buscar un café, y fue ahí donde nos conocimos por primera vez...<br></br>
                             Tuvimos una charla casual y nos despedimos... y no nos volveríamos a cruzar hasta dentro de un mes.<br></br>
                             Unos días después hubo un simulacro de incendio y cuando todos ingresaban Cris al ver a Neh intentó generar charla pero ella estaba distraída y no hubo suerte..<br></br>
                             Llegado fin de mes, último día en la oficina para Cris, a la salida se cruzan y se saludan.. y él le cuenta que es su último día..<br></br>
@@ -274,15 +274,19 @@ class SaveData extends Component {
                         <div class="card-body">
                              <h>Mujeres</h>
                             <div>
-                                <span class="badge bg-light">Vestido</span>
+                                <span class="badge bg-light">Vestido de fiesta largo o corto</span>
                                 <span class="badge bg-secondary"> </span>
-                                <span class="badge bg-light">Ropa Formal</span>
+                                <span class="badge bg-light">Conjunto pantalón y blazer</span>
+                                <span class="badge bg-secondary"> </span>
+                                <span class="badge bg-light">Ropa Semi Formal</span>
                             </div>
                             <h>Hombres</h>
                             <div>
-                                <span class="badge bg-light">Elegante Sport</span>
+                                <span class="badge bg-light">Pantalón de vestir y zapatos</span>
                                 <span class="badge bg-secondary"> </span>
-                                <span class="badge bg-light">Traje</span>
+                                <span class="badge bg-light">Camisa (no necesariamente formal)</span>
+                                <span class="badge bg-secondary"> </span>
+                                <span class="badge bg-light">Saco y Corbata (opcionales)</span>
                             </div>
                         </div>
                     </div>
