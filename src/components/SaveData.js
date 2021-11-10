@@ -160,7 +160,7 @@ class SaveData extends Component {
                     </div>
 
                     <p></p>
-                    <h>Mensaje a los novios?:</h>
+                    <h>Info Adicional (celíaco, alérjico, etc...)</h>
                     <div className="form-group col-md-8">
                         <input ref={this.saveAdditional_info} type="text" className="form-control
                         form-control-lg" placeholder={this.props.mensaje.additional_info}   
