@@ -115,7 +115,7 @@ class SaveData extends Component {
 
                     <div className="row">
                         <div className="form-group col-md-6">
-                            <h>Nombre:</h>
+                            <h>Nombre (modificalo como prefieras para tu invitación):</h>
                             <input ref={this.saveName} type="text" 
                             className="form-control form-control-lg" 
                             placeholder={this.props.mensaje.name} 
@@ -160,7 +160,7 @@ class SaveData extends Component {
                     </div>
 
                     <p></p>
-                    <h>Info Adicional (celíaco, alérjico, etc...)</h>
+                    <h>Info Adicional (celíaco, alérgico, etc...)</h>
                     <div className="form-group col-md-8">
                         <input ref={this.saveAdditional_info} type="text" className="form-control
                         form-control-lg" placeholder={this.props.mensaje.additional_info}   

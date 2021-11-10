@@ -86,6 +86,7 @@ class Ticket extends Component {
                         </div>
                         </div>
                     </div>
+                    <h8 class="card-title">(No es necesario traer la invitación)</h8>
                     <div className="bord">
                     <Canvas text={this.props.mensaje} ref={(response) => (this.componentRef = response)} />
                     </div>
