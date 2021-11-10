@@ -203,23 +203,23 @@ class SaveData extends Component {
                         <div class="card-header">Nuestra Historia</div>
                         <div class="card-body">
                         <p class="card-text">
-                            Nos conocimos en el trabajo, estábamos en equipos distintos, cuando la empresa se estaba mudando...<br></br>
-                            Neh trabajaría en las oficinas de Madero y Cris en Parque Patricios.<br></br>
-                            Un mes antes de la mudanza, en la oficina del Centro, Cris trabajaba en el cuarto piso y en el primero.
-                            Un día debido a un problema con un banco Cris debió quedarse hasta tarde. Cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
-                            Mientras tanto Neh fue a la cocina a buscar un café, y fue ahí donde nos conocimos por primera vez...<br></br>
+                            Nos conocimos en el trabajo, en la oficina del Centro, Cris trabajaba en el cuarto piso y Neh en el primero. <br></br>
+                            Estábamos en equipos distintos, cuando la empresa se estaba mudando. A Neh la mudaban a las oficinas de Madero y a Cris a las de Parque Patricios.<br></br>
+                            Un mes antes de la mudanza, debido a un problema con un banco Cris debió quedarse hasta tarde, y cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
+                            Mientras tanto Neh fue a la cocina a buscar un café, y fue ahí donde nos conocimos por primera vez!!<br></br>
                             Tuvimos una charla casual y nos despedimos... y no nos volveríamos a cruzar hasta dentro de un mes.<br></br>
-                            Unos días después hubo un simulacro de incendio y cuando todos ingresaban Cris al ver a Neh intentó generar charla pero ella estaba distraída y no hubo suerte..<br></br>
-                            Llegado fin de mes, último día en la oficina para Cris, a la salida se cruzan y se saludan.. y él le cuenta que es su último día..<br></br>
-                            Luego de una charla casual, le pregunta si quieren pasarle el Facebook (sisi... el Face!).. para seguir en contacto y ella acepta :)
+                            Unos días después hubo un simulacro de incendio, y cuando todos volvíamos adentro, Cris al ver a Neh intentó generar charla pero ella estaba distraída y no hubo suerte..<br></br>
+                            Llegado fin de mes, en el último día en la oficina para Cris, a la salida se cruzan, se saludan, y él le cuenta que es su último día..<br></br>
+                            Luego de una charla casual, le pregunta si quiere pasarle el Facebook (sisi... el Face!).. para seguir en contacto y ella acepta :)
                             <p></p>
-                            Así fue como unos días más tarde comenzamos a salir.
-                            Todo iba excelente durante los siguientes meses.. hasta que la consultora de Neh decide llevarla de vuelta a India. Y por más negociaciones intentadas, Neh termina yendose de Argentina :'(<br></br>
+                            Así fue como unos días más tarde comenzamos a salir!<br></br>
+                            Todo iba excelente durante los siguientes meses.. hasta que la consultora de Neh decide llevarla de vuelta a India.<br></br>
+                            Por más negociaciones intentadas, Neh termina yéndose de Argentina :'(<br></br>
                             Pasaron 3 meses hasta que finalmente Neh consiguió un trabjo en Argentina y pudo volver para encontrarse con Cris!<br></br>
                             <p></p>
-                            Ya pasaron casi 5 años, vivimos mil experiencias juntos, viajes, proyectos, de todo! y somos felices de hoy poder dar este paso tan importante.<br></br>
+                            Ya pasaron casi 5 años, vivimos mil experiencias juntos, viajes, proyectos, de todo! y hoy somos felices de poder dar este paso tan importante!!<br></br>
                             <p></p>
-                            Continuará...
+                            Esta historia Continuará...
                         </p>
                         </div>
                     </div>
@@ -270,7 +270,7 @@ class SaveData extends Component {
                     </div>
 
                     <div class="card border-info mb-3" styles="max-width: 20rem;">
-                        <div class="card-header">Dress Code / Código de Vestimenta | Opciones:</div>
+                        <div class="card-header">Dress Code / Vestimenta | Algunas Opciones:</div>
                         <div class="card-body">
                              <h>Mujeres</h>
                             <div>
