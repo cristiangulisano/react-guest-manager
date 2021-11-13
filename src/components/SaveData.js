@@ -26,7 +26,7 @@ class SaveData extends Component {
 
     saveName = React.createRef();
     saveEmail = React.createRef();
-    saveDocId = React.createRef();
+    //saveDocId = React.createRef();
     saveDrinks = React.createRef();
     saveVegetarian = React.createRef();
     saveAdditional_info = React.createRef();
@@ -43,11 +43,11 @@ class SaveData extends Component {
     handleData = (e) => {
         e.preventDefault();
 
-        if (this.saveDocId.current.value){ 
+        /*if (this.saveDocId.current.value){ 
             this.init.docId = this.saveDocId.current.value
-        } else {
+        } else {*/
             this.init.docId = this.props.mensaje.docId
-        };
+        //};
 
         if (this.saveAdditional_info.current.value) {
             this.init.additional_info = this.saveAdditional_info.current.value;
@@ -131,12 +131,12 @@ class SaveData extends Component {
                             form-control-lg" value={this.props.mensaje.email}
                             />
                         </div>
-                        <div className="form-group col-md-2">
+                        {/*<div className="form-group col-md-2">
                             <h>Documento</h>
                             <input ref={this.saveDocId} type="text" className="form-control
                             form-control-lg" placeholder={this.props.mensaje.docId}
                             />
-                        </div>
+                        </div>*/}
                     </div>
 
                     <p></p>
@@ -205,7 +205,7 @@ class SaveData extends Component {
                         <p class="card-text">
                             Nos conocimos en el trabajo, en la oficina del Centro, Cris trabajaba en el cuarto piso y Neh en el primero. <br></br>
                             Estábamos en equipos distintos, cuando la empresa se estaba mudando. A Neh la mudaban a las oficinas de Madero y a Cris a las de Parque Patricios.<br></br>
-                            Un mes antes de la mudanza, debido a un problema con un banco Cris debió quedarse hasta tarde, y cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
+                            Un mes antes de la mudanza, debido a un problema con un banco Cris tubo que quedarse hasta tarde, y cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
                             Mientras tanto Neh fue a la cocina a buscar un café, y fue ahí donde nos conocimos por primera vez!!<br></br>
                             Tuvimos una charla casual y nos despedimos... y no nos volveríamos a cruzar hasta dentro de un mes.<br></br>
                             Unos días después hubo un simulacro de incendio, y cuando todos volvíamos adentro, Cris al ver a Neh intentó generar charla pero ella estaba distraída y no hubo suerte..<br></br>
