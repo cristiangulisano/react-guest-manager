@@ -205,7 +205,7 @@ class SaveData extends Component {
                         <p class="card-text">
                             Nos conocimos en el trabajo, en la oficina del Centro, Cris trabajaba en el cuarto piso y Neh en el primero. <br></br>
                             Estábamos en equipos distintos, cuando la empresa se estaba mudando. A Neh la mudaban a las oficinas de Madero y a Cris a las de Parque Patricios.<br></br>
-                            Un mes antes de la mudanza, debido a un problema con un banco Cris tubo que quedarse hasta tarde, y cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
+                            Un mes antes de la mudanza, debido a un problema con un banco Cris tuvo que quedarse hasta tarde, y cuando se iba decidió parar en el primer piso a cargar su botella de agua para el gym..<br></br>
                             Mientras tanto Neh fue a la cocina a buscar un café, y fue ahí donde nos conocimos por primera vez!!<br></br>
                             Tuvimos una charla casual y nos despedimos... y no nos volveríamos a cruzar hasta dentro de un mes.<br></br>
                             Unos días después hubo un simulacro de incendio, y cuando todos volvíamos adentro, Cris al ver a Neh intentó generar charla pero ella estaba distraída y no hubo suerte..<br></br>
@@ -256,7 +256,7 @@ class SaveData extends Component {
                         <div class="card-body">
                             <p class="card-text">Lo más importante es que vengas a acompañarnos y disfrutar este momento con nosotros!</p>
                             Llevamos unos años viviendo juntos y ya fuimos equipando bien nuesta casa<br></br>
-                            por eso lo más útil para nosotros sería cualquier ayudita $, nos va a servir para la luna de miel!<br></br>
+                            por eso lo más útil para nosotros sería cualquier ayudita $, que nos va a servir para la luna de miel!<br></br>
                             <br></br>
                             <h8>Podés hacer una transferencia a:</h8>
                             <div>
