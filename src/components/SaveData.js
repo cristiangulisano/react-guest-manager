@@ -199,6 +199,29 @@ class SaveData extends Component {
                         </blockquote>             
                     </figure>
 
+                    <div class="card border-warning mb-3" styles="max-width: 20rem;">
+                        <div class="card-header">COVID19 - Medidas de Seguridad!!</div>
+                        <div class="card-body">
+                        <p class="card-text">
+                            Dado el reciente incremento de casos estamos implementando las siguientes medidas para la seguridad de todos: <br></br>
+                            <p></p>
+                            <p></p>
+                            - El salón tiene una capacidad de 120 personas, de la cual solo ocuparemos un 30%, dejando así un volumen de aire considerable.<br></br>
+                            <p></p>
+                            - Habrá alcohol en gel en baños y mesas.<br></br>
+                            <p></p>
+                            - El uso del barbijo será obligatorio.<br></br>
+                            <p></p>
+                            -La vacunación no será obligatoria pero estamos al tanto de que la mayoría de nuestros invitados tienen las 2 o 3 dosis aplicadas y/o ya tuvieron el virus con lo cual la audiencia posee un buen nivel de inmunidad.<br></br>
+                            <p></p>
+                            - Se preverá abrir las puertas de vidrio para circular el aire cada ciertos períodos, y se contará con un espacio para fumadores.<br></br>
+                            <p></p>
+                            - La gran mayoría de los invitados son jóvenes, esto fue puramente coincidencia pero también termina ayudando a que haya menor población de riesgo.<br></br>
+                            Tampoco habrá niños en el evento.<br></br>
+                        </p>
+                        </div>
+                    </div>
+
                     <div class="card border-info mb-3" styles="max-width: 20rem;">
                         <div class="card-header">Nuestra Historia</div>
                         <div class="card-body">
