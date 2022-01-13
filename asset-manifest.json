@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-guest-manager/static/css/main.5376e6c9.chunk.css",
+    "main.js": "/react-guest-manager/static/js/main.641674a4.chunk.js",
+    "main.js.map": "/react-guest-manager/static/js/main.641674a4.chunk.js.map",
+    "runtime-main.js": "/react-guest-manager/static/js/runtime-main.9a7b4ec2.js",
+    "runtime-main.js.map": "/react-guest-manager/static/js/runtime-main.9a7b4ec2.js.map",
+    "static/js/2.7ddb4d46.chunk.js": "/react-guest-manager/static/js/2.7ddb4d46.chunk.js",
+    "static/js/2.7ddb4d46.chunk.js.map": "/react-guest-manager/static/js/2.7ddb4d46.chunk.js.map",
+    "static/js/3.e163b11c.chunk.js": "/react-guest-manager/static/js/3.e163b11c.chunk.js",
+    "static/js/3.e163b11c.chunk.js.map": "/react-guest-manager/static/js/3.e163b11c.chunk.js.map",
+    "index.html": "/react-guest-manager/index.html",
+    "static/css/main.5376e6c9.chunk.css.map": "/react-guest-manager/static/css/main.5376e6c9.chunk.css.map",
+    "static/js/2.7ddb4d46.chunk.js.LICENSE.txt": "/react-guest-manager/static/js/2.7ddb4d46.chunk.js.LICENSE.txt",
+    "static/media/sample.fa5dc159.jpg": "/react-guest-manager/static/media/sample.fa5dc159.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a7b4ec2.js",
+    "static/js/2.7ddb4d46.chunk.js",
+    "static/css/main.5376e6c9.chunk.css",
+    "static/js/main.641674a4.chunk.js"
+  ]
+}
